@@ -1,0 +1,267 @@
+@import "../../styles/variables.scss";
+
+
+.episodes {
+  padding: 200px 0 400px;
+  background-color: #AF98F2;
+  position: relative;
+  @media all and (min-width: $largeMax) {
+    padding-bottom: 600px;
+  }
+  @media all and (max-width: $smallMax) {
+    padding-bottom: 200px;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url('../../public/images/episodes-page-clouds.png');
+    background-position: right -27px top;
+    background-repeat: no-repeat;
+    z-index: 0;
+    background-size: 100%;
+  }
+  .content {
+    position: relative;
+    margin: 0;
+    h3 {
+      line-height: 1.1;
+      font-size: 1.75rem;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 2.25rem;
+      margin-bottom: 3.75rem;
+      // margin-left: -2rem;
+    }
+    p {
+      line-height: 1.1;
+      font-size: 1.75rem;
+    }
+    a {
+      white-space: nowrap;
+      width: fit-content;
+      // margin-top: 3rem;
+      h3 {
+        width: 13rem;
+        @media all and (max-width: $mediumMax) {
+          width: auto;
+        }
+      }
+      &:hover {
+        .playButton {
+          svg {
+            g.play {
+              fill: white;
+            }
+          }
+        }
+      }
+    }
+    .viewAll {
+      width: fit-content;
+    }
+    .vidBox {
+      display: block;
+      position: relative;
+      width: 100%;
+      // height: 9rem;
+      padding-top: 56.25%; //16:9 aspect ratio
+      background-color: rgb(70, 70, 70);
+      &.listedVidBox {
+        @media all and (max-width: $mediumMax) {
+          display: none;
+        }        
+      }
+      .playButton {
+        svg {
+          position: absolute;
+          top: 25%;
+          left: 25%;
+          z-index: 3;
+          width: 51%;
+          height: auto;
+          cursor: pointer;
+      
+          &:hover {
+            g.play {
+              fill: white;
+            }
+          }
+        }
+      }
+      .player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .activeEpisodeContainer {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      @media all and (max-width: $mediumMax) {
+        padding-left: 1.7rem;
+        padding-right: 1.7rem;
+      }     
+      @media all and (max-width: $xsmallMax) {
+        padding-left: 0rem;
+        padding-right: 0rem;
+      }
+    }
+    .activeEpisode {
+      width: 90%;
+      // flex-grow: 1;
+      padding: 0 2rem;
+      @media all and (max-width: $mediumMax) {
+        padding: 0;
+        width: 100%;
+      }
+    }
+    .activeEpisodeButton {
+      cursor: pointer;
+    }
+    .episodesContainer {
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      // justify-content: center;
+      @media all and (max-width: $mediumMax) {
+        flex-direction: column;
+      }
+      .episodesCol{
+        // flex-grow: 1;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-bottom: 1rem;
+        z-index: 2;
+        width: (1/3)*100%;
+        a {
+          .mobileArrow {
+            @media all and (min-width: $mediumMax) {
+              display: none;
+            }
+            flex-grow: -1;
+            width: fit-content;
+            svg {
+              height: 3rem;
+              width: 5rem;
+              @media all and (max-width: $xsmallMax) {
+                height: 2rem;
+                width: 4rem;
+              }
+              
+            }
+            g.play {
+              fill: white;
+            }
+          }
+        }
+        @media all and (max-width: $mediumMax) {
+          width: 100%;
+          padding-left: 0rem;
+          padding-right: 1rem;
+          margin-bottom: 0.5rem;
+          @media all and (max-width: $xsmallMax) {
+            padding-right: 0;
+          }
+          a {
+            display: flex;
+            align-items: center;
+            // flex-wrap: wrap;
+            .episodeTextContainer {
+              display: flex;
+              align-items: center;
+              flex-wrap: wrap;
+              p {
+                white-space: initial;
+                margin-bottom: 0.25rem;
+                @media all and (max-width: $xsmallMax) {
+                  font-size: 1.5rem;
+                }
+              }
+              .desciptionDash {
+                margin: 0 4rem;
+              }
+              h3 {
+                margin-bottom: 0.25rem;
+                @media all and (max-width: $xsmallMax) {
+                  font-size: 1.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .episodesTrailer {
+    position: absolute;
+    overflow: visible;
+    bottom: 0;
+    width: 100%;
+    background-color: #CBCABF;
+    height: 150px;
+    z-index: 2;
+    @media all and (min-width: $largeMax) {
+      height: 210px;
+    }
+    @media all and (max-width: $mediumMax) {
+      height: 100px;
+    }
+    @media all and (max-width: $smallMax) {
+      height: 75px;
+    }
+    div:only-child {
+      overflow: visible !important; //override next/image inline style
+    }
+
+    img {
+      z-index: 2;
+      // position: absolute;
+      right: 0;
+      bottom: 11% !important; //override next/image inline style
+      height: auto;
+      overflow: visible;
+      transform: translate(0,-50%);
+
+    }
+  }
+  .metaplexModalClose {
+    background-color: white;
+    border: 1px solid #4b4ba2;
+    border-radius: 16px;
+    height: 2.6rem;
+    color: black;
+    font-weight: 700;
+    font-size: 1.25rem;
+    width: 66%;
+    margin-top: 1rem;
+  }
+
+  .voteBtn {
+    display: flex;
+    justify-content: center;
+    margin: -30px auto 80px auto;
+    padding: 0 20px;
+    cursor: pointer;
+    min-width: 175px;
+    font-size: 2.5rem;
+    background-color: #5E328C;
+    font-weight: 700;
+    color: white;
+    font-family: "Amatic SC", sans-serif;
+  }
+}

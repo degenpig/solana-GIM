@@ -1,0 +1,87 @@
+@import '../../styles/variables.scss';
+
+.container {
+  padding: 1rem 5rem 5rem 5rem;
+  margin: 1rem 2rem 3rem 2rem;
+  @media all and (max-width: $xsmallMax) {
+    padding: 1rem 2rem 2rem 2rem;
+    margin: 1rem;
+  }
+  border-radius: 32px;
+  border: 6px solid white;
+  background: rgb(248,188,84);
+  background: linear-gradient(180deg, rgba(248,188,84,1) 0%, rgba(248,188,84,1) 15%, rgba(255,255,255,1) 100%); 
+  -webkit-box-shadow: 10px 10px 15px -6px rgba(0,0,0,0.45);
+  -moz-box-shadow: 10px 10px 15px -6px rgba(0,0,0,0.45);
+  box-shadow: 10px 10px 15px -6px rgba(0,0,0,0.45);
+  h1 {
+    font-weight: 700;
+    font-size: 2.75rem;
+  }
+  h2 {
+    color: #7f0301;
+    font-weight: 700;
+    font-size: 1.9rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+.optionsWithImage {
+  display: flex;
+}
+.optionWithImage {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  margin: 2rem 1.5rem 1rem 1.5rem;
+  h4 {
+    margin: 0.25rem 0;
+    font-weight: 400;
+  }
+}
+.optionNoImage {
+  display: flex;
+  margin: 1rem 0;
+}
+.formContainer {
+  display: flex;
+  justify-content: space-between;
+  .formContent {
+    flex-grow: 2;
+  }
+}
+.formSubmit {
+  display: flex;
+  justify-content: end;
+  &.noCustomInput {
+    flex-direction: column;
+  }
+}
+
+.defaultResultBackground {
+  position: relative;
+  background-color: #f2f2f2;
+  height: 3.5rem;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  @media all and (max-width: $smallMax) {
+    height: 5rem;
+    .answerText {
+      h4 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .resultIndicator{
+    position: relative;
+    height: 100%;
+  }
+  .answerText{
+    position: absolute;
+    top: 10px;
+    left: 40px;
+  }
+}

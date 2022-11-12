@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@api.video/nodejs-sdk": "^1.10.4",
+    "@metaplex-foundation/mpl-token-metadata": "^1.2.5",
+    "@nfteyez/sol-rayz": "^0.10.2",
+    "@solana/web3.js": "^1.36.0",
+    "axios": "^0.26.1",
+    "base-58": "0.0.1",
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "eth-sig-util": "^3.0.1",
+    "ethereumjs-util": "^7.1.4",
+    "ethers": "^5.6.1",
+    "express": "^4.17.3",
+    "graphql": "^16.3.0",
+    "moment": "^2.29.2",
+    "moment-timezone": "^0.5.34",
+    "mysql2": "^2.3.3",
+    "node-fetch": "^2.6.7",
+    "request": "^2.88.2",
+    "tweetnacl": "^1.0.3"
+  }
+}

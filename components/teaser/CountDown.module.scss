@@ -1,0 +1,98 @@
+@import "../../styles/variables.scss";
+.container {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  // flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  // font-size: 2rem;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: white;
+  > div:nth-child(3) {
+    font-size: 22px;
+  }
+
+  h2 {
+    // margin-top: 60px;
+    @media all and (max-width: $xsmallMax) {
+      // margin-top: 40px;
+      font-size: 1rem;
+      @media all and ( max-width: $xxsmallMax) {
+        margin-bottom: 0.1rem;
+      }
+    }
+    @media all and (min-width: $xsmallMax) and (max-width: $smallMax) {
+      margin-top: 40px;
+      // font-size: 1.75rem;
+      font-size: 1.5rem;
+    }
+    @media all and (min-width: $smallMax) {
+      // font-size: 3rem;
+      font-size: 2.5rem;
+    }
+  }
+  h3 {
+    font-size: 1.5rem;
+    @media all and (max-width: $xsmallMax) {
+      margin-bottom: 0;
+      font-size: 0.75rem;
+      @media all and ( max-width: $xxsmallMax) {
+        font-size: 0.5rem;
+      }
+    }
+    @media all and (min-width: $xsmallMax) and (max-width: $smallMax) {
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+    @media all and (min-width: $smallMax) and (max-width: $mediumMax) {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+    }
+    a {
+      color: #E46800;
+      &:hover {
+        color: #E46800;
+      }
+    }
+  }
+  .timer {
+    height: 1px;
+    position: relative;
+    top: -10px;
+    @media all and (max-width: $xsmallMax) {
+      top: -20px;
+      @media all and ( max-width: $xxsmallMax) {
+        top: -30px;
+      }
+    }
+    span {
+      margin: 0.5rem 0.2rem;
+      font-size: 1.5rem;
+      color: #E46800;
+      @media all and (max-width: $xsmallMax) {
+        margin-bottom: 0;
+        font-size: 0.75rem;
+        @media all and ( max-width: $xxsmallMax) {
+          font-size: 0.5rem;
+        }
+      }
+      @media all and (min-width: $xsmallMax) and (max-width: $smallMax) {
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
+      @media all and (min-width: $smallMax) and (max-width: $mediumMax) {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+    // text-shadow: #212529 1px 0 10px;
+}

@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gimmicks",
+  "info": {
+    "name": "Gimmicks",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Details": {
+      "type": "component",
+      "repeatable": false,
+      "component": "gimmick-details.details"
+    },
+    "Properties": {
+      "type": "component",
+      "repeatable": false,
+      "component": "gimmick-properties.properties"
+    },
+    "Avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "AvatarVariations": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Description": {
+      "type": "text"
+    },
+    "NFTID": {
+      "type": "uid",
+      "required": true
+    },
+    "Name": {
+      "type": "string"
+    }
+  }
+}

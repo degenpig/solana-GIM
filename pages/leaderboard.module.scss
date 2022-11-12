@@ -1,0 +1,228 @@
+@import '../styles/variables.scss';
+.container {
+ margin: 10rem 6rem 500px 6rem;
+ @media all and (max-width: $smallMax) {
+   margin: 10rem 3rem 500px 3rem;
+ }
+ @media all and (max-width: $xsmallMax) {
+  margin: 7rem 1.5rem 500px 1.5rem;
+ }
+ p { 
+   
+   font-size: 1.5rem;
+   @media all and (max-width: $xsmallMax) {
+    font-size: 1rem;
+   }
+   &.pageDescription{
+    margin: 0 1.75rem 0rem 1.75rem;
+   }
+ }
+
+ h3 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  }
+
+  .thisWeekWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    .thisWeek {
+      position: relative;
+      display: block;
+      cursor: pointer;
+      font-family: $altFont;
+      font-weight: bold;
+      font-size: 22px;
+      border-radius: 12px;
+      border: 1px solid black;
+      padding: 5px 35px;
+      height: 100%;
+      -moz-appearance:none;
+      -webkit-appearance:none;
+      appearance:none;
+      outline:0;
+      
+      > option {
+        font-size: 18px;
+      }
+    }
+    &:after {
+      content:'';
+      border: solid black;
+      border-width: 0 2px 2px 0;
+      padding: 3px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      display: flex;
+      color: #000;
+      background-color: #fff;
+      margin-left: -23px;
+      pointer-events: none;
+    }
+  }
+}
+.titleContainer {
+ display: flex;
+ justify-content: center;
+ margin-bottom: 1rem;
+
+}
+.titleInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    white-space: nowrap;
+    font-family: $altFont;
+    font-weight: 900;
+    font-size: 4rem;
+    @media all and (max-width: $xsmallMax) {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  }
+  .DICPunchIcon {
+    position: relative;
+    width: 7.75rem;
+    margin-right: 1rem;
+  }
+}
+.toggleView {
+  margin: 1rem;
+  font-family: $altFont;
+  font-size: 2.25rem;
+  text-align: center;
+  a {
+    margin: 1rem;
+    cursor: pointer;
+    &:hover {
+      color: black;
+    }
+  }
+  .isActive {
+    text-decoration: underline;
+    font-weight: 700;
+  }
+}
+
+.tileContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  h2 {
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.15rem;
+    line-height: 1.3;
+    margin-bottom: 0;
+  }
+}
+.tile {
+  width: calc((1/5*100%));
+  // padding-right: 3.5rem;
+  // padding-bottom: 3.5rem;
+  padding: 1.75rem;
+  @media all and (max-width: $smallMax) {
+    width: 100%;
+    // padding-right: 0;
+  }
+  @media all and  (min-width: $smallMax) and (max-width: $mediumMax) {
+    width: calc((1/3*100%));
+  }
+  @media all and  (min-width: $mediumMax) and (max-width: $laptopMax) {
+    width: calc((1/4*100%));
+    // padding-right: 2.5rem;
+    // padding-bottom: 2.5rem;
+    padding: 1.25rem;
+    h4 {
+      font-size: 1.05rem;
+    }
+  }
+  .gimmickImageContainer {
+    position: relative;
+    .ranking {
+      position: absolute;
+      top: -55px;
+      left: 0;
+      font-family: $altFont;
+      .pound {
+        position: absolute;
+        top: -5px;
+        left: 2px;
+        font-family: $altFont;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      .number {
+        position: absolute;
+        top: -15px;
+        left: 16px;
+        font-family: $altFont;
+        font-size: 3.5rem;
+        font-weight: 800;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .buttonContainer {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+    }
+    a {
+      // padding-left: 0;
+    }
+    // .openSeaContainer {
+    //   height: ;
+    // }
+    .btn {
+      font-family: $bodyFont;
+      font-weight: 400;
+      font-size: 0.75rem;
+      border: 1px solid gray;
+      color: gray;
+      border-radius: 9999px;
+      white-space: nowrap;
+      align-items: center;
+      display: flex;
+      padding: 0.2rem;
+      padding-right: 0.4rem;
+      &:hover {
+        background-color: rgb(218, 218, 218);
+      }
+    }
+    .info {
+      flex-grow: 0;
+      text-align: center;
+      
+    }
+    .openSea {
+      flex-grow: 1;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      // padding-left: 1rem;
+      z-index: 3;
+      @media all and  (min-width: $mediumMax) and (max-width: $laptopMax) {
+        padding-left: 0;
+      }
+      .image {
+        height: 15px;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}

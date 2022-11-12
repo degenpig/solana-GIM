@@ -1,0 +1,86 @@
+@import "../styles/variables.scss";
+.background {
+  padding: 0 0 1000px;
+  position: relative;
+  background: rgb(248,220,84);
+  background: linear-gradient(0deg, rgba(248,220,84,1) 0%, rgba(248,220,84,1) 35%, rgba(255,255,255,1) 100%); 
+  @media all and (max-width: $smallMax) {
+    padding-bottom: 400px;
+  }
+  .bottomImage {
+    content: "";
+    position: absolute;
+    // top: 0;
+    bottom: -100px;
+    right: 0;
+    left: 0;
+    background-image: url('../public/images/faq-trailer-sign.png');
+    background-position: right -75px bottom;
+    margin-bottom: -5%; //overflow
+    background-repeat: no-repeat;
+    // background-size: 1000px auto;
+    background-size: 100% auto;
+    height: 1200px;
+    z-index: 3;
+
+    @media all and (max-width: $mediumMax) {
+      background-size: 100% auto;
+    }
+
+    @media all and (max-width: $smallMax) {
+      background-size: 110% auto;
+      bottom: -50px ;
+      height: 600px;
+    }
+  }
+}
+.container {
+  margin: 10rem 3rem 20rem 3rem;
+  @media all and (max-width: $smallMax) {
+    margin: 10rem 0 20rem 0;
+  }
+}
+.titleContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    font-family: $altFont;
+    font-weight: 900;
+    font-size: 3rem;
+  }
+  .viewToggle {
+    display: flex;
+    h3 {
+      font-family: $altFont;
+      font-weight: 700;
+      margin: 0.5rem 1rem;
+      &.active {
+        font-weight: 900;
+        text-decoration: underline;
+      }
+    }
+    .toggleBtn {
+      cursor: pointer;
+      &:hover {
+        color: black;
+        font-weight: 900;
+      }
+    }
+  }
+}
+.description {
+  margin: 1rem 1rem 1rem 7rem;
+  @media all and (max-width: $smallMax) {
+    margin: 1rem;
+  }
+  h2 {
+    font-family: $altFont;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+}

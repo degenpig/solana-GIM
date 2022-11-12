@@ -1,0 +1,12 @@
+{
+  "name": "gimmicks-cli",
+  "dependencies": {
+    "@project-serum/anchor": "^0.23.0",
+    "@solana/web3.js": "1.33.0",
+    "@types/node": "^17.0.23",
+    "commander": "^9.0.0",
+    "loglevel": "^1.7.1",
+    "typescript": "^4.6.3"
+  },
+  "type": "module"
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_store_store_headers",
+  "info": {
+    "name": "StoreHeader",
+    "icon": "circle"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "SubTitle": {
+      "type": "string"
+    },
+    "Background": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

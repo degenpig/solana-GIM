@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_announcements",
+  "info": {
+    "name": "announcement",
+    "icon": "angle-double-down"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "text"
+    }
+  }
+}

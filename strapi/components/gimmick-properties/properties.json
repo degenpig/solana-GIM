@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_gimmick_properties_properties",
+  "info": {
+    "name": "Properties",
+    "icon": "angle-down"
+  },
+  "options": {},
+  "attributes": {
+    "Bodies": {
+      "type": "string"
+    },
+    "RightArm": {
+      "type": "string"
+    },
+    "Eyes": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Accessories": {
+      "type": "string"
+    },
+    "LeftArm": {
+      "type": "string"
+    },
+    "Pendants": {
+      "type": "string"
+    },
+    "Expression": {
+      "type": "string"
+    },
+    "Collar": {
+      "type": "string"
+    },
+    "Backdrops": {
+      "type": "string"
+    }
+  }
+}

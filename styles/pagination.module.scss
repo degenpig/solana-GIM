@@ -1,0 +1,65 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  // width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  -webkit-box-shadow: 0px 1px 18px 9px rgba(110,110,110,1);
+  -moz-box-shadow: 0px 1px 18px 9px rgba(110,110,110,1);
+  box-shadow: 0px 1px 18px 9px rgba(110,110,110,1);
+
+  background-color: white;
+  list-style: none;
+  margin-bottom: 0;
+  padding: 1rem 0 1rem 0 ;
+  z-index: 4;
+  .pageItem {
+    display: inline-block;
+    a {
+    display: inline-block;
+    border: 1px solid #4b4ba2;
+    border-width: 1px 0px 1px 1px;
+    padding: 1rem;
+    user-select: none;
+    &:hover {
+      color: white;
+      background-color: #4b4ba299;
+    }
+    }
+    &.previous {
+      a {
+        border-radius: 8px 0 0 8px;
+        border-width: 1px 0px 1px 1px;
+        width:8rem;
+        text-align: center;
+        &:hover {
+          color: white;
+          background-color: #4b4ba299;
+        }
+      }
+    }
+    &.next {
+      a {
+        border-radius: 0 8px 8px 0;
+        border-width: 1px;
+        width:8rem;
+        text-align: center;
+        &:hover {
+          color: white;
+          background-color: #4b4ba299;
+        }
+      }
+    }
+    &.active {
+      a {
+        border: 1px solid #4b4ba2;
+        border-width: 1px 0 1px 1px;
+        background-color: #4b4ba2dd;
+        color: white;
+      }
+    }
+  }
+}

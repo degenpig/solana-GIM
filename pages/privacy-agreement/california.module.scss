@@ -1,0 +1,54 @@
+@import "../../styles/variables.scss";
+.tableOfContents {
+  a {
+    color: black;
+    &:hover {
+      color: blue;
+    }
+  }
+}
+
+.table {
+  .row {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    &:first-child {
+      .catTile {
+        border-width: 1px;
+      }
+      .exTile {
+        border-width: 1px 1px 1px 0;
+      }
+    }
+    .catTile {
+      border: 1px solid black;
+      border-width: 0px 1px 1px 1px;
+      h3, p {
+        width: 250px;
+        @media all and (max-width: $smallMax) {
+          width: 100px;
+          @media all and (max-width: $xsmallMax) {
+            width: 75px;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+    .exTile {
+      flex-grow: 2;
+      border-width: 0px 1px 1px 0;
+      border-color: black;
+      border-style: solid;
+      @media all and (max-width: $smallMax) {
+        @media all and (max-width: $xsmallMax) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    // padding
+    .catTile, .exTile {
+      padding: 0.5rem;
+    }
+  }
+}

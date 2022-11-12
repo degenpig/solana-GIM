@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_gimmick_details_details",
+  "info": {
+    "name": "Details",
+    "icon": "asterisk"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "BirthDate": {
+      "type": "string"
+    },
+    "BirthPlace": {
+      "type": "string"
+    },
+    "Citizenship": {
+      "type": "string"
+    },
+    "Occupation": {
+      "type": "string"
+    },
+    "Spouse": {
+      "type": "string"
+    }
+  }
+}

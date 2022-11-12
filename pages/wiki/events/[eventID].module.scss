@@ -1,0 +1,18 @@
+.container {
+  p {
+    font-size: 1.125rem;
+  }
+}
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 12px;
+  margin-top: 1rem;
+  &:hover {
+    color: black;
+    background-color: rgb(172, 172, 172);
+    transition: background-color 0.35s ease;
+  }
+}

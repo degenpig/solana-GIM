@@ -1,0 +1,63 @@
+@import "../../styles/variables.scss";
+
+.container {
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+}
+.gimmickImage {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.propertiesContent {
+  div{
+    white-space: nowrap;
+  }
+}
+.DICpunchButton {
+  border: 1px solid #4b4ba2;
+  background-color: white;
+  color: #4b4ba2;
+  border-radius: 12px;
+  height: 3.5rem;
+  min-width: 60%;
+  margin: 0rem 0 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media all and (max-width: $laptopMax) {
+    width: 100%;
+  }
+  .icon {
+    height: 100%;
+    width: 2.5rem;
+    margin-right: 1rem;
+  }
+  .text{
+    margin: 0;
+    font-size: 1.4rem;
+    span {
+      &:last-child {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+.infoParent {
+  display: flex;
+  margin-bottom: 0.2rem;
+
+}
+.infoLabel {
+  flex-grow: 0;
+}
+.infoContent {
+ flex-grow: 1;
+ margin-left: 1rem;
+ select {
+   margin-top: 0.2rem;
+   width: 100%;
+ }
+}

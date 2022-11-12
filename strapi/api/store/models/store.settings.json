@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "stores",
+  "info": {
+    "name": "Store"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "StoreHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "store.store-header"
+    }
+  }
+}

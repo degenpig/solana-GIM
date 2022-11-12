@@ -1,0 +1,178 @@
+@import '../../styles/variables.scss';
+
+.container {
+  padding: 1rem 5rem 5rem 5rem;
+  margin: 1rem 6rem 3rem 10rem;
+  @media all and (max-width: $xsmallMax) {
+    padding: 1rem 2rem 2rem 2rem;
+    margin: 1rem;
+  }
+  border-radius: 32px;
+  border: 6px solid white;
+  background: rgb(248,188,84);
+  background: linear-gradient(180deg, rgba(248,188,84,1) 0%, rgba(248,188,84,1) 15%, rgba(255,255,255,1) 100%); 
+  -webkit-box-shadow: 10px 10px 15px -6px rgba(0,0,0,0.45);
+  -moz-box-shadow: 10px 10px 15px -6px rgba(0,0,0,0.45);
+  box-shadow: 10px 10px 15px -6px rgba(0,0,0,0.45);
+  h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  h2 {
+    color: #7f0301;
+    font-weight: 700;
+    font-size: 1.9rem;
+  }
+  h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+}
+.no-votes {
+  background: rgba(200, 200, 200) !important;
+  background: linear-gradient(180deg, rgba(200,200,200,1) 0%, rgba(200,200,200,1) 15%, rgba(255,255,255,1) 100%) !important; 
+  .formSubmit {
+    input {
+      background-color: #888888;
+    }
+  }
+}
+.optionsWithImage {
+  display: flex;
+  @media all and (max-width: $smallMax) {
+    flex-direction: column;
+  }
+}
+.radioContainer {
+  display: flex;
+  justify-content: center;
+}
+.optionWithImage {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  margin: 2rem 1.5rem 1rem 1.5rem;
+  span {
+    display: flex;
+    justify-content: center;
+  }
+  @media all and (max-width: $smallMax) {
+    // flex-direction: row;
+  }
+  h4 {
+    margin: 0.25rem 0;
+    font-weight: 400;
+    @media all and (max-width: $smallMax) {
+      text-align: center;
+    }
+  }
+  .radioBtn {
+    // display: flex;
+    // justify-content: center;
+    // position: relative;
+    height: 33px;
+    margin-right: 1rem;
+    // left: 40%;
+    // @media all and (max-width: $smallMax) {
+    //   left: 0%;
+    // }
+  }
+  input[type="radio"] + *::before {
+    display: flex;
+    position: relative;
+    // left: 50%;
+    // justify-content: center;
+    @media all and (max-width: $smallMax) {
+      // left: 0%;
+    }
+  }
+}
+.optionNoImage {
+  display: flex;
+  margin: 1rem 0;
+  .radioBtn {
+    width: 33px;
+    margin-right: 1rem;
+  }
+  textarea {
+    min-width: 0;
+    border: none;
+    font-size: 1.75rem;
+    flex-grow: 2;
+    margin-right: 10rem;
+    white-space: wrap;
+    @media all and (max-width: $mediumMax) {
+      margin-right: 0;
+    }
+  }
+  input[type="radio"] + *::before {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+}
+.formContainerWithImage {
+  @media all and (max-width: $mediumMax) {
+    flex-direction: column;
+  }
+}
+.formContainer {
+  display: flex;
+  justify-content: space-between;
+  .formContent {
+    min-width: 0;
+    flex-grow: 2;
+    input[type="radio"] {
+      cursor: pointer;
+      opacity: 0;
+      position: absolute;
+      z-index: 2;
+      width: 33px;
+      height: 33px;
+    }
+    input[type="radio"] + *::before {
+      content: "";
+      // display: inline-block;
+      width: 33px;
+      height: 33px;
+      margin-right: 1rem;
+      border-radius: 50%;
+      border-style: solid;
+      border-width: 0.1rem;
+      border-color: black;
+      background-color: white;
+    }
+    input[type="radio"]:checked + *::before {
+      background-image: url("../../public/images/white-check.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      background-color: black;
+      border-color: white;
+      border-width: 2px;
+    }
+    // input[type="radio"]:checked + * {
+    //   color: teal;
+    // }
+    
+  }
+}
+.formSubmit {
+  display: flex;
+  justify-content: end;
+  input {
+    padding: 0.25rem 1.5rem;
+    background-color: #ff4b7a;
+    color: white;
+    font-weight: 400;
+    font-size: 2.5rem;
+    border: none;
+    border-radius: 12px;
+    // height: 4rem;
+    @media all and (max-width: $mediumMax) {
+      width: 100%;
+    }
+  }
+  &.noCustomInput {
+    flex-direction: column;
+  }
+}

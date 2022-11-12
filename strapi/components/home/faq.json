@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_faqs",
+  "info": {
+    "name": "FAQ",
+    "icon": "user-graduate"
+  },
+  "options": {},
+  "attributes": {
+    "Question": {
+      "type": "string"
+    },
+    "Answer": {
+      "type": "text"
+    }
+  }
+}

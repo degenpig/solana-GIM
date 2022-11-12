@@ -1,0 +1,44 @@
+.container {
+  margin-bottom: 1rem;
+  p {
+    font-size: 1.125rem;
+  }
+  a {
+    color: blue;
+  }
+}
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 12px;
+  margin-top: 1rem;
+  &:hover {
+    color: black;
+    background-color: rgb(172, 172, 172);
+    transition: background-color 0.35s ease;
+  }
+}
+.reportLink {
+  color: blue;
+  text-decoration: underline;
+  float: right;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    color: #4b4ba2;
+  }
+}
+.metaplexModalClose {
+  background-color: white;
+  border: 1px solid #4b4ba2;
+  border-radius: 16px;
+  height: 2.6rem;
+  color: black;
+  font-weight: 700;
+  font-size: 1.25rem;
+  width: 66%;
+  margin-top: 1rem;
+}

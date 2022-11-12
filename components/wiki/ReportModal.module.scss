@@ -1,0 +1,87 @@
+@import '../../styles/variables.scss';
+
+.reportModal {
+  position: fixed;
+  z-index: 0;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .reportModalBackground{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 0;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .reportModalTile {
+    z-index: 1;
+    background-color: white;
+    height: 70%;
+    width: 70%;
+    border-radius: 24px;
+    @media all and (max-width: $smallMax) {
+      width: 95%;
+      height: 70%;
+    }
+    h1 {
+      font-family: $altFont;
+      font-size: 3rem;
+      font-weight: 700;
+      @media all and (max-width: $smallMax) {
+        font-size: 2rem;
+        font-weight: 900;
+      }
+    }
+    .reportModalContent {
+      height: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        h1 {
+          text-align: center;
+        }
+        label {
+          font-size: 1.5rem;
+          font-weight: 600;
+          margin: 1rem;
+          @media all and (max-width: $smallMax) {
+            font-size: 1.25rem;
+          }
+        }
+        select {
+          width: 10rem;
+          background-color: white;
+          border: 1px solid grey;
+          border-radius: 24px;
+          text-align: center;
+          font-size: 1.25rem;
+        }
+        textarea {
+          width: 70%;
+          height: 10rem;
+        }
+        .submit {
+          margin: 1rem 1rem;
+          background-color: black;
+          color: white;
+          border: none;
+          border-radius: 12px;
+          padding: 0.75rem;
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

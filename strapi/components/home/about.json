@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_home_abouts",
+  "info": {
+    "name": "About",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title1": {
+      "type": "string"
+    },
+    "Description1": {
+      "type": "text"
+    },
+    "Title2": {
+      "type": "string"
+    },
+    "Members": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.members"
+    }
+  }
+}

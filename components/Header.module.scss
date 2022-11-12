@@ -1,0 +1,403 @@
+@import "../styles/variables";
+
+// .getGimmickHoverFix {
+//   display: flex;
+//   justify-content: center;
+//   width: 12rem;
+//   text-align: center;
+//   @media all and (max-width: $largeMax) {
+//     width: 9rem;
+//   }
+// }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  transition: background-color 250ms;
+
+  &.scrollDown {
+    background-color: white;
+  }
+}
+
+.headerCol {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @media all and (max-width: $mediumMax) {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  @media all and (max-width: $smallMax) {
+    position: relative;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+}
+
+.logo {
+  margin-top: 1rem;
+  width: auto;
+  @media all and (max-width: $laptopMax) {
+    width: auto;
+  }
+
+  @media all and (max-width: $largeMax) {
+    width: auto;
+  }
+
+  img {
+    width: 200px;
+    height: auto;
+    @media all and (max-width: $largeMax) {
+      width: 100px;
+    }
+    @media all and (max-width: $mediumMax) {
+      width: 100px;
+    }
+    @media all and (max-width: $smallMax) {
+      width: 150px;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+
+  @media all and (max-width: $smallMax) {
+    display: block;
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+    z-index: 10;
+  }
+}
+
+.menus {
+  padding-top: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+
+  @media all and (max-width: $smallMax) {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: transform 250ms;
+    padding: 0.75rem 0;
+
+    &.open {
+      transform: translateX(0);
+    }
+  }
+}
+
+.menu,
+.secondaryMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  font-family: $altFont;
+  font-weight: 700;
+  margin: 0;
+  // @media all and (max-width: $largeMax) {
+    padding-left: 0rem;
+  // }
+
+  @media all and (max-width: $smallMax) {
+    flex-direction: column;
+    margin: 1rem 0;
+
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.menu {
+  padding-left: 1.5rem;
+  @media all and (max-width: $largeMax) {
+    padding-left: 1rem;
+  }
+  @media all and (max-width: $mediumMax) {
+    padding-left: 0rem;
+  }
+  li {
+    position: relative;
+    margin: 0 1rem;
+    @media all and (min-width: $largeMax) {
+      margin: 0 0.75rem;
+    }
+    @media all and (max-width: $mediumMax) {
+      margin: 0 0.5rem;
+    }
+    &.allowListBtn {
+      @media all and (max-width: $smallMax) {
+        margin-bottom: 0.25rem;
+      }
+    }
+    &.getGimmickBtn{
+      text-decoration: underline;
+      @media all and (max-width: $smallMax) {
+        margin-bottom: 0.25rem;
+      }
+    }
+    &.allowListBtn {
+    }
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+    font-size: 2rem;
+    white-space: nowrap;
+
+    @media all and (max-width: $largeMax) {
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      color: #4A5AB4;
+    }
+  }
+  .episodesLink{
+    padding-right: 20px;
+    @media all and (max-width: $smallMax) {
+      padding-right: 0;
+    }
+    &:after {
+      content: "new";
+      display: table-caption;
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      font-family: Inter,sans-serif;
+      background-color: red;
+      color: #fff;
+      border-radius: 5px;
+      margin-left: -20px;
+      margin-bottom: 23px;
+      padding: 0 10px;
+      font-size: 14px;
+      @media all and (max-width: $laptopMax) {
+        // top: -15px;
+      }
+      @media all and (max-width: $largeMax) {
+        top: -12px;
+      }
+      @media all and (max-width: $smallMax) {
+        top: 8px;
+        right: -60px;
+      }
+    }
+  }
+}
+
+
+.secondaryMenu {
+  @media all and (max-width: $smallMax) {
+    margin-top: 0;
+  }
+
+  li {
+    margin: 0 0.25rem;
+  }
+  .socialIcons {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    @media all and (max-width: $smallMax) {
+      justify-content: center;
+      margin-top: 0.75rem;
+    }
+  }
+  a {
+    color: #4A5AB4;
+    text-decoration: none;
+    font-size: 1.5rem;
+    @media all and (max-width: $largeMax) {
+      font-size: 1.25rem;
+    }
+
+    &:hover {
+      color: black;
+    }
+
+    span {
+      white-space: nowrap;
+    }
+
+    svg {
+      width: 22px;
+      height: auto;
+
+      path {
+        fill: #4A5AB4;
+      }
+    }
+  }
+  .connectBtn {
+    //width: 8rem; //maintain same size for coming soon hover
+    padding: 0.375rem 0.375rem;
+    border: 2px solid #4A5AB4;
+    border-radius: 12px;
+    color: #000;
+    // max-height: 100%;
+    // display: inline-block;
+    a {
+      &:hover {
+
+      }
+    }
+    p {
+      margin: 0;
+    }
+    @media all and (max-width: $smallMax) {
+      margin-bottom: 5px;
+    }
+    span {
+      white-space: nowrap;
+      font-size: 1.5rem;
+    }
+  }
+  .connectedBtn {
+    // background-color: #4A5AB4;
+    color: white;
+    P {
+      margin: 0;
+    }
+  }
+  .connectedStonerBtn {
+    background-color: #4A5AB4;
+    color: white;
+    .stonerBtn{
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+  }
+}
+.profileMenu {
+  margin-top: -2.2rem;
+  flex-direction: column;
+  @media all and (min-width: $smallMax) and (max-width: $laptopMax) {
+    margin-top: -1.9rem;
+  }
+  @media all and (max-width: $smallMax) {
+    margin-top: 0;
+    flex-direction: column-reverse;
+  }
+  .profileMenuContainer {
+    position: relative;
+
+    .loggedInMenu {
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: #f8f4f4;
+      border-radius: 0 0 12px 12px;
+      width: 100%;
+
+      font-family: $bodyFont;
+      font-weight: 500;
+      font-size: 1.375rem;
+      a {
+        text-align: center;
+        color: #000;
+        user-select: none;
+        cursor: pointer;
+        &:hover {
+          background-color: #4A5AB4;
+          color: white;
+        }
+      }
+      
+    }
+  }
+  .connectBtn {
+    //width: 8rem; //maintain same size for coming soon hover
+    border: 2px solid #4A5AB4;
+    border-radius: 12px;
+    color: #000;
+    // max-height: 100%;
+    // display: inline-block;
+    background-color: #f8f4f4;
+    &:hover {
+      background-color: #4A5AB4;
+      color: white;
+    }      
+  }
+  .connectedBtn {
+    border-radius: 12px 0 0 12px;
+    padding: 3px 6px;
+    border: 0;
+    background-color: #e6e6e6;
+    &:hover {
+      background-color: #4A5AB4;
+      color: white;
+    }      
+
+    @media all and (max-width: $smallMax) {
+      margin-right: 0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    &.navMenuOpen {
+      border-radius: 12px 0 0 0;
+    }
+    
+    .loggedInBar {
+      display: flex;
+      align-items: center;
+      .loggedInStatus {
+        border-radius: 9999px;
+        background-color: #3db54d;
+        height: 10px;
+        width: 10px;
+        margin: 0 0.5rem;
+      }
+      p {
+        font-family: $bodyFont;
+        font-weight: 500;
+        font-size: 1.375rem;
+        margin-bottom: 0;
+        margin: 0 1rem;
+        @media all and (min-width: $smallMax) and (max-width: $laptopMax) {
+          font-size: 1.1rem;
+        }
+        @media all and (max-width: $smallMax) {
+          font-size: 1.1rem;
+        }
+      }
+      .profileImageContainer {
+        // height: 100%;
+        width: 2.4rem;
+        margin: -3px -6px -3px 0.25rem;
+        @media all and (min-width: $smallMax) and (max-width: $laptopMax) {
+          width: 2.2rem;
+        }
+        @media all and (max-width: $smallMax) {
+          width: 2.2rem;
+          margin-left: 0.25rem;
+        }
+      }
+    }
+  }
+}

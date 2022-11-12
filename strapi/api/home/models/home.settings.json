@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "name": "Home",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Gimmicks": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.gimmicks"
+    },
+    "About": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.about"
+    },
+    "FAQ": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.faq"
+    },
+    "announcement": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.announcement"
+    }
+  }
+}

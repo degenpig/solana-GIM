@@ -1,0 +1,293 @@
+@import "../../styles/variables.scss";
+.container {
+  position: relative;
+  background-color: #AF261A;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  @media all and (max-width: $mediumMax) {
+    padding-top: 1rem;
+  }
+}
+.twitterIconWrapper {
+  position: absolute;
+  left: -35px;
+  top: 1rem;
+  .twitterLink {
+    .twitterIcon {
+
+    }
+  }
+}
+.subscribe {
+  user-select: none;
+  z-index: 3;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  .subscribeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 11rem;
+    height: 3.5rem;
+    background-color: black;
+    color: white;
+    border-radius: 9999px;
+    // padding: 0.75rem 3rem;
+    z-index: 2;
+    cursor: pointer;
+    &:hover {
+      color: white;
+      // box-shadow: 5px 5px 8px #3b3b3b;
+    }
+    @media all and (max-width: $smallMax) {
+      // padding: 0.5rem 2rem;
+      height: 3rem;
+      width: 9rem;
+    }
+    p {
+      margin: 0 0 0 0.25rem;
+    }
+    .bellIconWrapper {
+      position: relative;
+      height: 20px;
+      .bellIcon {
+        bottom: -1;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg) brightness(100%) contrast(103%);
+      }    
+    }
+  }
+}
+.modalOverlay {
+  .modalBox {
+    background-color: #DE8630;
+    padding: 6rem;
+    @media all and (max-width: $smallMax) {
+      padding: 3rem 1.5rem;
+    }
+    .closeIcon {
+      top: 0px;
+      right: 0px;
+      left: auto;
+      svg.filterBlack {
+        path {
+          fill: black;
+        }
+        // filter: invert(0%) sepia(98%) saturate(0%) hue-rotate(35deg) brightness(98%) contrast(106%);
+      }
+    }
+  }
+}
+.modalContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  color: white;
+  background-color: #DE8630;
+  margin-bottom: 0;
+  // padding-bottom: 56.25%;
+  // height: 0;
+  h3 {
+    margin-bottom: 3rem;
+    font-weight: 400;
+  }
+}
+.form {
+  width: 100%;
+}
+.formContent {
+  position: relative;
+  width: 100%;
+  input {
+    text-indent: 4rem;
+  }
+}
+.mailIconContainer {
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  .mailIcon {
+    
+  }
+}
+.emailInput {
+  width: 100%;
+  height: 4rem;
+  border: 0;
+  border-radius: 6px;
+}
+.submitInput {
+  position: absolute;
+  height: 3.25rem;
+  width: 8rem;
+  right: 0.4rem;
+  top: 0.4rem;
+  background-color: black;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  @media all and (max-width: $xsmallMax) {
+    width: 6rem;
+  }
+}
+.timerContainer {
+  width: 100%;
+}
+.timer {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  bottom: 0;
+  margin-bottom: 10px;
+}
+.desktopContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  @media all and (max-width: $mediumMax) {
+    display: none;
+  }
+  @media all and (min-width: $laptopMax) {
+    height: 105%;
+  }
+}
+.desktopImage {
+  position: absolute;
+  bottom: -10px;
+}
+.mobileContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  @media all and (min-width: $mediumMax) {
+    display: none;
+  }
+}
+.mobileBackgroundRatio {
+  // position: absolute;
+  bottom: 0;
+  width: 100%;
+  // height: 100%;
+}
+
+// .mobileAbsoluteContainer {
+//   position: absolute;
+//   bottom: 0;
+//   top: auto;
+// }
+// .mobileImage {
+//   width: 100%;
+//   bottom: 0;
+// }
+.nothingTextContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  @media all and (min-width: $laptopMax) and (max-width: $largeMax) {
+    bottom: 0;
+  }
+  @media all and (min-width: $largeMax) {
+    bottom: 70px;
+  }
+}
+.nothingText {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  // padding-left: 4rem;
+  // padding-right: 4rem;
+}
+.logoContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @media all and (max-width: $smallMax) {
+    top: 2rem;
+  }
+
+}
+.logo {
+  // position: absolute;
+ padding-left: 3rem;
+ padding-right: 3rem;
+}
+
+
+// modal
+
+.popupOverlay {
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(black, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  transition: opacity 250ms;
+  backdrop-filter: blur(6px);
+
+  &.show {
+    opacity: 1;
+    pointer-events: all;
+
+    .popup {
+      transform: translateY(0px);
+    }
+  }
+
+  .popup {
+    border-radius: 6px;
+    // padding: 20px;
+    width: 70%;
+    max-width: 700px;
+    text-align: center;
+    transform: translateY(50px);
+    transition: transform 250ms;
+    position: relative;
+
+    @media all and (max-width: $smallMax) {
+      width: 90%;
+      // padding: 10px;
+    }
+
+    .close {
+      position: absolute;
+      z-index: 3;
+
+      // @media all and (max-width: $smallMax) {
+      //   right: 0;
+      //   left: auto;
+      //   top: auto;
+      //   bottom: 100%;
+      // }
+
+      // svg {
+      //   width: 20px;
+      //   height: auto;
+
+      //   path {
+      //     fill: white;
+      //   }
+      // }
+    }
+
+    div {
+      // margin-bottom: 1rem;
+    }
+  }
+}

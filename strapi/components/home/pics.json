@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_home_pics",
+  "info": {
+    "name": "Pics",
+    "icon": "user-alt"
+  },
+  "options": {},
+  "attributes": {
+    "Picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
